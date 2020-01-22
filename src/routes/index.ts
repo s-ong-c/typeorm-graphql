@@ -1,10 +1,10 @@
 import Router from 'koa-router';
-const v1 = new Router();
+import api from './api/index';
 
-v1.get('/check', ctx => {
-  ctx.body = {
-    version: 'v1'
-  };
+const routes = new Router();
+
+routes.use('/api', api.routes());
+routes.get('/', ctx => {
+  ctx.body = 'hello world!!!!';
 });
-
-export default v1;
+export default routes;

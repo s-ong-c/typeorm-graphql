@@ -51,6 +51,7 @@
     "webpack": "^4.41.5"
   },
   "scripts": {
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "dev": "NODE_ENV=development ts-node-dev --respawn ./src/server.ts"
   }
 }
