@@ -12,7 +12,7 @@ import {
 import User from './User';
 
 @Entity('user_profiles', {
-  synchronize: false
+  synchronize: true
 })
 export default class UserProfile {
   @PrimaryGeneratedColumn('uuid')

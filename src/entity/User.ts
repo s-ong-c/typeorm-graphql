@@ -3,11 +3,11 @@ import {
   PrimaryGeneratedColumn,
   Column,
   Index,
-  Unique,
   CreateDateColumn,
   UpdateDateColumn,
   getRepository
 } from 'typeorm';
+import DataLoader from 'dataloader';
 
 @Entity('users', {
   synchronize: true
@@ -38,3 +38,9 @@ export default class User {
   @Column({ default: false })
   is_certified!: boolean;
 }
+
+export const userLoader: DataLoader<string, User> = new DataLoader<string, User>(ids => {
+  const repo = getRepository(User);
+  const users = repo.findByIds(ids);
+  return users;
+});
