@@ -19,7 +19,7 @@
     "@types/remove-markdown": "^0.1.1",
     "@types/sanitize-html": "^1.20.2",
     "@types/shortid": "^0.0.29",
-    "apollo-server-koa": "^2.9.16",
+    "apollo-server-koa": "^2.14.2",
     "dataloader": "^2.0.0",
     "dotenv": "^8.2.0",
     "graphql": "^14.5.8",
